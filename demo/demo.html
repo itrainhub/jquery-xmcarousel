@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../dist/xm-carousel.css">
+  <script src="../jquery-1.12.4.min.js"></script>
+  <script src="../src/jquery.carousel.js"></script>
+  <script>
+    $(function() {
+      $(".xm-carousel-container:first").carousel({
+        autoplay: {
+          delay: 5000
+        },
+        pagination: {
+          el: ".xm-carousel-pagination",
+          type: "bullet"
+        },
+        type: "vertical",
+        navigation: {
+          nextEl: ".xm-carousel-button-next",
+          prevEl: ".xm-carousel-button-prev"
+        }
+      });
+
+      $(".c2").carousel({
+        autoplay: {
+          delay: 3000
+        },
+        type: "fade"
+      });
+
+      $(".c3").carousel({
+        autoplay: {
+          delay: 4000
+        },
+        type: "horizontal",
+        navigation: {
+          nextEl: ".xm-carousel-button-next",
+          prevEl: ".xm-carousel-button-prev"
+        }
+      });
+    })
+  </script>
+
+  <style type="text/css">
+    .c1 {
+      width: 200px;
+      height: 150px;
+    }
+    .c2 {
+      width: 550px;
+      height: 309px;
+    }
+    img {
+      width: 550px;
+      height: 309px;
+    }
+
+    .c3 {
+      width: 450px;
+      height: 320px;
+      border: 1px solid #ccc;
+    }
+
+    .c3 .xm-carousel-wrapper .xm-carousel-slider {
+      width: 440px;
+      height: 300px;
+      padding: 10px 0 10px 10px;
+    }
+    .cell {
+      margin-right: 10px;
+      width: 100px;
+      height: 300px;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="xm-carousel-container c1">
+    <div class="xm-carousel-wrapper">
+      <div class="xm-carousel-slider" style="background: #f00"></div>
+      <div class="xm-carousel-slider" style="background: #ff0"></div>
+      <div class="xm-carousel-slider" style="background: #f0f"></div>
+    </div>
+    <div class="xm-carousel-pagination"></div>
+    <div class="xm-carousel-button-prev">&lt;</div>
+    <div class="xm-carousel-button-next">&gt;</div>
+  </div>
+
+  <div class="xm-carousel-container c2">
+    <div class="xm-carousel-wrapper">
+      <div class="xm-carousel-slider"><img src="./images/1.jpg" alt=""></div>
+      <div class="xm-carousel-slider"><img src="./images/2.jpg" alt=""></div>
+      <div class="xm-carousel-slider"><img src="./images/3.jpg" alt=""></div>
+      <div class="xm-carousel-slider"><img src="./images/4.jpg" alt=""></div>
+      <div class="xm-carousel-slider"><img src="./images/5.jpg" alt=""></div>
+      <div class="xm-carousel-slider"><img src="./images/6.jpg" alt=""></div>
+    </div>
+  </div>
+
+  <div class="xm-carousel-container c3">
+    <div class="xm-carousel-wrapper">
+      <div class="xm-carousel-slider xx">
+        <div class="cell" style="background: #1cc;"></div>
+        <div class="cell" style="background: #abc;"></div>
+        <div class="cell" style="background: #338;"></div>
+        <div class="cell" style="background: #738;"></div>
+      </div>
+      <div class="xm-carousel-slider">
+        <div class="cell" style="background: #68c;"></div>
+        <div class="cell" style="background: #3c5;"></div>
+        <div class="cell" style="background: #9c6;"></div>
+        <div class="cell" style="background: #123;"></div>
+      </div>
+      <div class="xm-carousel-slider">
+        <div class="cell" style="background: #499;"></div>
+        <div class="cell" style="background: #888;"></div>
+        <div class="cell" style="background: #5c5;"></div>
+        <div class="cell" style="background: #942;"></div>
+      </div>
+      <div class="xm-carousel-slider">
+        <div class="cell" style="background: #736;"></div>
+        <div class="cell" style="background: #237;"></div>
+        <div class="cell" style="background: #854;"></div>
+        <div class="cell" style="background: #ccc;"></div>
+      </div>
+    </div>
+
+    <!-- <div class="xm-carousel-button-prev">&lt;</div>
+    <div class="xm-carousel-button-next">&gt;</div> -->
+  </div>
+</body>
+</html>
